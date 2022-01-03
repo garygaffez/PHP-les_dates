@@ -1,7 +1,12 @@
 <?php
     $date = new DateTime();
-    $date->add(new DateInterval('P22D'));
-    // var_dump($date);
+    // pour le fuseau horaire
+    $timeUtc = new DateTimeZone('Europe/Paris');
+    $date->setTimezone($timeUtc);
+    var_dump($date);
+    $inter = new DateInterval('P22D');
+    $date->add($inter);
+    
 ?>
 
 <!DOCTYPE html>

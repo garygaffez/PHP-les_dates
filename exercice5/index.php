@@ -1,16 +1,15 @@
 <?php
     // avec fonctions
-    $date1 = strtotime("17-12-2021");
-    $date2 = strtotime("16-5-2016");
+    $date1 = time();
+    $date2 = strtotime("2016-5-16");
     $daysNumberCalcul = $date1 - $date2;
-    $totalDays = $daysNumberCalcul/86400;
+    $totalDays = floor($daysNumberCalcul/86400);
 
     // avec l'objet DateTime
-    $today = '17-12-2021';
-    $since = '16-05-2016';
-    $d = new DateTime($today);
+    $since = '2016-5-16';
+    $d = new DateTime();
     $d2 = new DateTime($since);
-    $diff = ($d2->diff($d,true));
+    $diff = ($d2->diff($d));
     var_dump($diff);
 
 ?>
@@ -28,7 +27,7 @@
 <body class="bg-dark">
 
 <p class="text-center mt-5 text-warning fs-2">
-    Mombre de jours qui sépare la date du jour avec le 16 mai 2016 :
+    Nombre de jours qui sépare la date du jour avec le 16 mai 2016 :
 </p>
 <p class="text-center mt-1 text-white fs-2">
     <?=$totalDays;?>

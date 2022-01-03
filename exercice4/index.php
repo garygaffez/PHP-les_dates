@@ -1,5 +1,6 @@
 <?php
     $tl = mktime(15, 0, 0, 8, 2, 2016);
+    $str = strtotime('2016-12-20 12:00:00');
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,8 @@
 
 <p class="text-center mt-5 text-warning fs-2">Timestamp du mardi 2 août 2016 à 15h00 :</p>
 <p class="text-center mt-1 text-white fs-2">
-    <?=$tl;?>
+    <?=$tl;?><br>
+    <?=$str;?>
 </p>
 
 

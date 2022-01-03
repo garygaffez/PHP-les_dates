@@ -1,9 +1,9 @@
 <?php
 
-setlocale(LC_TIME, 'fra_fra.utf8');
+    setlocale(LC_TIME, 'fra_fra.utf8');
 
-$dateFrench = strftime('%d %B %Y');
-$date = date("d F Y");
+    $dateFrench = strftime('%d %B %Y');
+    $date = date('d F Y');
 ?>
 
 <!DOCTYPE html>
